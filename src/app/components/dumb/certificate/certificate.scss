@@ -1,0 +1,47 @@
+:host {
+    
+    @media (max-width: 768px) {
+        .certificate-card {
+            flex-direction: column;
+        }
+        
+        .card-image {
+            order: -1;
+            height: 250px;
+        }
+    }
+
+    .rose-gold-glow {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.75rem;
+            padding: 3px;
+            background: linear-gradient(
+              45deg,
+              #ffb6c1,  /* Light pink */
+              #ffd700,  /* Gold */
+              #f67cb9,  /* Hot pink */
+              #d4af37,  /* Metallic gold */
+              #ffc0cb,  /* Pink */
+              #ffd700
+            );
+            background-size: 300% 300%;
+            animation: rose-gold-flow 7s linear infinite;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+          }
+          
+           .rose-gold-glow > div {
+            position: relative;
+            z-index: 1;
+            background: white;
+            border-radius: 0.6rem;
+          }
+          
+          @keyframes rose-gold-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+
+}
+

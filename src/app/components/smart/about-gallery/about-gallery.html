@@ -1,0 +1,67 @@
+<section class="px-4 py-12 mx-auto text-center bg-[rgb(226_216_207)]">
+  <app-title-page class="block mb-6">О нас</app-title-page>
+  <div class="grid max-w-6xl grid-cols-1 gap-4 mx-auto mb-8 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
+    @for (img of allImages; track $index) {
+      <div 
+        class="aspect-[3/4] relative overflow-hidden rounded-lg  transition-transform duration-300 hover:scale-[1.02] cursor-pointer"
+        (click)="openLightbox($index)">
+        <img 
+          [src]="img.src" 
+          [alt]="img.alt" 
+          width="875"
+          height="1313"
+          class="absolute inset-0 object-cover w-full h-full"
+          loading="lazy"
+          
+        >
+      </div>
+    }
+  </div>
+  
+  <p class="max-w-3xl px-4 mx-auto text-lg italic text-gray-700">
+    «Loya Massage Studio» — островок безмятежности, где время течёт медленнее, плечи сами собой расправляются, 
+    а лёгкая музыка уносит последние тревоги. Всё, что остаётся — тёплое прикосновение рук мастера и сладкое 
+    чувство полной гармонии.
+  </p>
+
+  <!-- Модальное окно галереи -->
+  @if (lightboxActive) {
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+    (click)="closeLightboxOnBackdropClick($event)">
+      <!-- Кнопка закрытия -->
+      <button 
+        class="absolute z-50 text-4xl text-white transition-colors top-6 right-6 hover:text-amber-600"
+        (click)="closeLightbox()">
+        &times;
+      </button>
+      
+      <!-- Кнопка "назад" -->
+      <button 
+        class="absolute z-50 p-4 text-4xl text-white rounded-full left-76 hover:bg-white/10"
+        (click)="prevImage()">
+        &#10094;
+      </button>
+      
+      <!-- Основное изображение -->
+      <div class="relative max-w-[90vw] max-h-[90vh]">
+        <img 
+          [src]="allImages[currentImageIndex].src" 
+          [alt]="allImages[currentImageIndex].alt" 
+          class="max-w-full max-h-[90vh] object-contain"
+        >
+      </div>
+      
+      <!-- Кнопка "вперед" -->
+      <button 
+        class="absolute z-50 p-4 text-4xl text-white rounded-full right-76 hover:bg-white/10"
+        (click)="nextImage()">
+        &#10095;
+      </button>
+      
+      <!-- Индикатор текущего изображения -->
+      <div class="absolute left-0 right-0 text-center text-white bottom-2">
+        {{ currentImageIndex + 1 }} / {{ allImages.length }}
+      </div>
+    </div>
+  }
+</section>

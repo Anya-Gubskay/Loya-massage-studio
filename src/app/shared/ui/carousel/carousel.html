@@ -1,0 +1,42 @@
+@if (showArrows) {
+  <button class="carousel-arrow prev" [ngStyle]="{top: config().positionArrow, left: config().positionArrowRightLeft}" (click)="prev()">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+      <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none"/>
+    </svg>
+  </button>
+}
+<div class="carousel-container">
+
+  <div class="carousel-wrapper">
+
+
+    <div class="carousel-track"
+         [style.transition]="transitionEnabled ? 'transform 0.5s ease' : 'none'"
+         [style.transform]="transformStyle">
+      @for (slide of extendedSlides; track $index) {
+        <div class="carousel-slide" [style.width]="'calc(100% / ' + config().slidesToShow + ')'">
+          <ng-container *ngTemplateOutlet="itemTemplate; context: { $implicit: slide, index: $index }"></ng-container>
+        </div>
+      }
+    </div>
+
+
+  </div>
+
+  @if (showDots) {
+    <div class="carousel-dots">
+      @for (slide of slides(); track $index; let i = $index) {
+        <button class="carousel-dot" 
+                [class.active]="i === currentIndex"
+                (click)="goTo(i)"></button>
+      }
+    </div>
+  }
+</div>
+@if (showArrows) {
+  <button class="carousel-arrow next" [ngStyle]="{top: config().positionArrow, right: config().positionArrowRightLeft}" (click)="next()">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+      <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/>
+    </svg>
+  </button>
+}

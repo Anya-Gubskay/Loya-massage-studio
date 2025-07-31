@@ -1,0 +1,8 @@
+<div class="py-12 bg-[rgb(226_216_207)]">
+    <div class="container flex flex-col max-w-6xl gap-6 px-5 mx-auto">
+      <app-title-page>Наши мастера</app-title-page>
+@for (master of masters; track master.id) {
+    <app-master-card-dumb [master]="master"></app-master-card-dumb>
+  }
+  </div>
+  </div>

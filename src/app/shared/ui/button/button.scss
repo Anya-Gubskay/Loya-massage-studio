@@ -1,0 +1,52 @@
+
+:host {
+    display: inline-block;
+  
+  button,a {
+    position: relative;
+    padding: 0.75rem 3rem; // px-6 py-3
+    border-radius: 13px; // rounded-[13px]
+    font-weight: 500; // font-medium
+    transition: all 0.3s ease; // transition-all duration-300
+    border-width: 1px;
+    border-style: solid;
+  
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  
+  .primary {
+    background-color: #5A3E2B; // bg-amber-600
+    color: white;
+    border: none;
+  
+    &:hover {
+      background-color: #be9c85;; // hover:bg-amber-700
+      color: white; // hover:border-amber-700
+    }
+  }
+  
+  .secondary {
+    background-color: white;
+    color: #5A3E2B;
+    border: none;
+  
+    &:hover {
+        color: #fff; // hover:bg-gray-50
+        background-color: #be9c85;
+    }
+  }
+  
+  .tertiary {
+    background-color: transparent;
+    color: #5A3E2B;
+    border-color: var(--color-primary);
+  
+    &:hover {
+      border-color: white;
+    }
+  }
+  }
+  

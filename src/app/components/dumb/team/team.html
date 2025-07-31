@@ -1,0 +1,31 @@
+<section class="w-full bg-[rgba(227,213,197,0.8)] py-6 md:py-10 lg:py-12 px-4  sm:px-6 md:px-8 lg:px-12 flex flex-col justify-center gap-8 items-center ">
+  <h2 class="text-3xl font-bold text-center text-primary">Наши специалисты</h2>
+
+  <app-carousel
+  appScrollAnimation animationType="zoom" 
+  [slides]="data()"
+  [config]="currentConfig()"
+  class="w-[80%]"
+>
+<ng-template #itemTemplate let-item>
+  <div class="h-full">
+      <img class="object-contain w-full max-h-[300px] md:max-h-[400px] mx-auto" 
+           [src]="item.photo" 
+           [alt]="item.alt"
+           width="653px"
+           height="979px"
+           >
+    <div class="text-content flex flex-col justify-center text-center h-[100px]">
+      <h3 class="mb-1 text-xl font-bold text-gray-900 line-clamp-2">{{ item.name }}</h3>
+      <p class="text-lg text-gray-700 line-clamp-2">{{ item.role }}</p>
+    </div>
+  </div>
+</ng-template>
+</app-carousel>
+
+  <!-- Кнопки -->
+  <div class="flex justify-center gap-2">
+    <app-button variant="tertiary" text="записаться" href="https://dikidi.net/601523?p=0.pi"></app-button>
+    <app-button variant="primary" text="Все специалисты" routerLink="/team"></app-button>
+  </div>
+</section>

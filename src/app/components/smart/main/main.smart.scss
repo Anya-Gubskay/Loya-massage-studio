@@ -1,0 +1,16 @@
+
+    :host {
+        .container-img {
+            background-image: url('/assets/images/img-bg.png');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+          
+        @media (max-width: 1024px) {
+          .container-img {
+            background-image: none !important;
+        }
+    }
+  }

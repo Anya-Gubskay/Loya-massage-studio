@@ -1,0 +1,32 @@
+@if (href) {
+  <!-- Ссылка -->
+  <button
+    [class]="variant"
+    [disabled]="disabled"
+    [textContent]="text"
+    [title]="text"
+    class="px-5 py-3 text-sm uppercase btn-base md:px-6 md:py-3 md:text-base"
+    (click)="openLink()"
+  >
+  </button>
+} @else if (routerLink) {
+  <!-- Кнопка с роутингом -->
+  <button
+    [class]="variant"
+    [disabled]="disabled"
+    [textContent]="text"
+    [title]="text"
+    class="px-5 py-3 text-sm uppercase btn-base md:px-6 md:py-3 md:text-base"
+    (click)="handleClick()"
+  >
+  </button>
+} @else {
+  <button
+  [class]="variant"
+  [disabled]="disabled"
+  [textContent]="text"
+  [title]="text"
+  class="px-5 py-3 text-xs uppercase btn-base md:px-6 md:py-3 md:text-base"
+>
+</button> 
+}

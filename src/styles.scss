@@ -1,0 +1,63 @@
+@use "sass:map";
+@import "tailwindcss/index.css" important;
+
+body {
+  margin: 0;
+  padding: 0;
+  button,a {
+    cursor: pointer;
+  }
+  font-family: 
+  'Helvetica Neue', 
+  Helvetica, 
+  Arial, 
+  sans-serif;
+  height: 100%;
+}
+
+@theme {
+  --color-primary: #5A3E2B;
+}
+
+
+
+// Переменные для шрифтов
+$font-monda: 'Monda', sans-serif;
+$font-weights: (
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'bold': 700
+);
+
+$text-sizes: (
+  'sm': 0.875rem,
+  'base': 1rem,
+  'lg': 1.125rem,
+  'xl': 1.25rem,
+  '2xl': 1.5rem
+);
+
+// 🔁 Обновлённый миксин
+@mixin text-style($size: 'base', $weight: 'regular') {
+  font-family: $font-monda;
+  font-weight: map.get($font-weights, $weight);
+  font-size: map.get($text-sizes, $size);
+}
+
+.text-heading {
+  @include text-style('2xl', 'bold');
+  line-height: 1.2;
+}
+
+.text-subtitle {
+  @include text-style('xl', 'medium');
+}
+
+.text-body {
+  @include text-style('base', 'regular');
+}
+
+.text-light {
+  font-weight: map.get($font-weights, 'light') !important;
+}
