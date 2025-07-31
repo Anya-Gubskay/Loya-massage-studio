@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://loya.by/</loc><priority>1.0</priority>
+  <lastmod>2025-07-31</lastmod>
+  </url>
+  <url><loc>https://loya.by/about</loc></url>
+  <url><loc>https://loya.by/abou-sliders</loc></url>
+  <url><loc>https://loya.by/services</loc></url>
+  <url><loc>https://loya.by/team</loc></url>
+  <url><loc>https://loya.by/reviews</loc></url>
+  <url><loc>https://loya.by/certificates</loc></url>
+  <url><loc>https://loya.by/contacts</loc><priority>0.9</priority>
+  <lastmod>2025-07-31</lastmod>
+  </url>
+</urlset>

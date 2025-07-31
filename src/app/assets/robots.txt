@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?*
+Disallow: /*.json$
+Disallow: /*.js$
+
+Sitemap: https://loya.by/sitemap.xml

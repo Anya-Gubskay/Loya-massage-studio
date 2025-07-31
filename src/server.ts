@@ -6,27 +6,39 @@ import {
 } from '@angular/ssr/node';
 import express from 'express';
 import { join } from 'node:path';
+import { existsSync } from 'node:fs';
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
-
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
-/**
- * Example Express Rest API endpoints can be defined here.
- * Uncomment and define endpoints as necessary.
- *
- * Example:
- * ```ts
- * app.get('/api/{*splat}', (req, res) => {
- *   // Handle API request
- * });
- * ```
- */
+// ==================== Добавьте этот блок ПЕРЕД app.use(express.static) ====================
+// Обработка robots.txt
+app.get('/robots.txt', (req, res) => {
+  const filePath = join(browserDistFolder, 'robots.txt');
+  if (existsSync(filePath)) {
+    res.type('text/plain');
+    res.set('Cache-Control', 'public, max-age=86400'); // Кеширование 1 день
+    res.sendFile(filePath);
+  } else {
+    res.status(404).end();
+  }
+});
 
-/**
- * Serve static files from /browser
- */
+// Обработка sitemap.xml
+app.get('/sitemap.xml', (req, res) => {
+  const filePath = join(browserDistFolder, 'sitemap.xml');
+  if (existsSync(filePath)) {
+    res.type('application/xml');
+    res.set('Cache-Control', 'public, max-age=86400'); // Кеширование 1 день
+    res.sendFile(filePath);
+  } else {
+    res.status(404).end();
+  }
+});
+// ========================================================================================
+
+// Оригинальный код остается без изменений
 app.use(
   express.static(browserDistFolder, {
     maxAge: '1y',
@@ -35,9 +47,6 @@ app.use(
   }),
 );
 
-/**
- * Handle all other requests by rendering the Angular application.
- */
 app.use((req, res, next) => {
   angularApp
     .handle(req)
@@ -47,22 +56,14 @@ app.use((req, res, next) => {
     .catch(next);
 });
 
-/**
- * Start the server if this module is the main entry point.
- * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
- */
 if (isMainModule(import.meta.url)) {
   const port = process.env['PORT'] || 4000;
   app.listen(port, (error) => {
     if (error) {
       throw error;
     }
-
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
 
-/**
- * Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.
- */
 export const reqHandler = createNodeRequestHandler(app);
