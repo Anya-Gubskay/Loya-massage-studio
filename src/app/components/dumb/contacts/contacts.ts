@@ -11,6 +11,4 @@ import { TitlePage } from "@shared/ui/title-page/title-page";
 })
 export class Contacts {
   backgroundClass = input<string>("bg-[rgb(226_216_207)]");
-  mapLoaded = false;
-
 }

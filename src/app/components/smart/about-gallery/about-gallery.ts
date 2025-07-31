@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
+import { MetaService } from '@services/meta.service';
 import { TitlePage } from "@shared/ui/title-page/title-page";
 
 interface GalleryImage {
@@ -15,6 +16,20 @@ interface GalleryImage {
   styleUrl: './about-gallery.scss'
 })
 export class AboutGallerySmart {
+  private metaService = inject(MetaService);
+  constructor() {
+    this.metaService.setMetaTags({
+      title: 'О нашем салоне Loya Massage Studio',
+      description: 'Loya Massage Studio - островок безмятежности в центре Минска. ' + 
+                  'Профессиональные массажисты создают атмосферу полной релаксации с 2024 года. ' +
+                  'Теплые прикосновения рук мастеров дарят гармонию и снимают все тревоги.',
+      keywords: 'массажный салон Минск, о массажном салоне, Loya Massage Studio, ' +
+               'релаксационный массаж, спа-салон, профессиональные массажисты, ' +
+               'атмосфера релакса, снятие стресса, гармония тела и духа',
+      image: '/assets/images/about-studio/1.webp',
+    });
+  }
+  
  allImages: GalleryImage[] = [
   { 
     src: 'assets/images/about-studio/1.webp', 

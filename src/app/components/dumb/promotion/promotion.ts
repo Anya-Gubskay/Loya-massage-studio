@@ -11,6 +11,8 @@ import { Button } from '@shared/ui/button/button';
   styleUrl: './promotion.scss'
 })
 export class Promotion {
+
+  
   data = input<CarouselItem[]>([]);
   carouselConfig = signal<CarouselConfig>({
         slidesToShow: 1,

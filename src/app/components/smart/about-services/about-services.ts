@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CardServicesDumb } from '@components/dumb/card-services/card-services';
+import { MetaService } from '@services/meta.service';
 import { ServicesCard } from '@shared/interfaces/services-card';
 import { TitlePage } from "@shared/ui/title-page/title-page";
 
@@ -10,6 +11,18 @@ import { TitlePage } from "@shared/ui/title-page/title-page";
   styleUrl: './about-services.scss'
 })
 export class AboutServices {
+  private metaService = inject(MetaService)
+  constructor() {
+    this.metaService.setMetaTags({
+      title: 'Услуги массажного салона Loya Massage Studio в Минске',
+      description: 'Профессиональные массажные услуги в Минске: массаж тела, коррекция фигуры и массаж лица. ' +
+                  'Полный прайс-лист 2024 года. Видео-обзоры всех процедур. Запишитесь онлайн или по телефону.',
+      keywords: 'массаж Минск, прайс на массаж, коррекция фигуры, массаж лица, ' +
+               'стоимость массажа, Loya Massage Studio услуги, антицеллюлитный массаж, ' +
+               'релакс массаж, видео массажа, запись на массаж',
+      image: '/assets/images/massage/classical.webp',
+    });
+  }
    services: ServicesCard[]  = [{
     title: "Массаж тела",
     videoUrl: "assets/videos/massage1.mp4",

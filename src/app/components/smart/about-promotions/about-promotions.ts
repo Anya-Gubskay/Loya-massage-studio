@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PromoCardDumb } from '@components/dumb/promo-card/promo-card';
+import { MetaService } from '@services/meta.service';
 import { Promotion } from '@shared/interfaces/promo-card';
 import { TitlePage } from "@shared/ui/title-page/title-page";
 
@@ -11,6 +12,21 @@ import { TitlePage } from "@shared/ui/title-page/title-page";
   styleUrl: './about-promotions.scss'
 })
 export class AboutPromotionsSmart {
+  private metaService = inject(MetaService);
+  constructor() {
+    this.metaService.setMetaTags({
+      title: 'Акции и спецпредложения | Loya Massage Studio Минск',
+      description: 'Специальные предложения для новых клиентов: скидка 20 BYN на первый массаж. ' +
+                  'Выгодные абонементы со скидкой до 10% на курсы массажа. ' + 
+                  'Ограниченные по времени предложения от профессионального массажного салона.',
+      keywords: 'акции массажного салона, скидки на массаж, выгодные абонементы, ' +
+               'спецпредложение для новых клиентов, курс массажа со скидкой, ' +
+               'Loya Massage Studio акции, экономный массаж Минск, ' +
+               'подарочные сертификаты на массаж',
+      image: '/assets/images/promotions/1.webp',
+    });
+  }
+  
   promotions: Promotion[] = [
     {
       id: 1,

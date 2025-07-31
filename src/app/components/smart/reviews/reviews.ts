@@ -4,6 +4,7 @@ import { Button } from "@shared/ui/button/button";
 import { ResponsiveService } from '@services/responsive';
 import { TitlePage } from "@shared/ui/title-page/title-page";
 import { CarouselItem } from '@shared/interfaces/slider-item';
+import { MetaService } from '@services/meta.service';
 
 @Component({
   selector: 'app-reviews-smart',
@@ -12,6 +13,19 @@ import { CarouselItem } from '@shared/interfaces/slider-item';
   styleUrl: './reviews.scss'
 })
 export class ReviewsSmart  {
+    private metaService = inject(MetaService);
+    constructor() {
+      this.metaService.setMetaTags({
+        title: 'Отзывы клиентов Loya Massage Studio | Реальные мнения о массаже',
+        description: 'Реальные отзывы клиентов о массаже в нашем салоне. ' +
+                    'Фото-отзывы из Instagram с оценкой качества процедур. ' +
+                    'Убедитесь в профессионализме наших мастеров перед записью.',
+        keywords: 'отзывы массажный салон Минск, Loya Massage отзывы, ' +
+                 'мнения о массаже, Instagram отзывы, оценки клиентов, ' +
+                 'реальные впечатления от массажа, фотоотчеты процедур',
+        image: '/assets/images/reviews/6.webp',
+      });
+    }
   private responsiveService = inject(ResponsiveService);
   isBrowser = false;
   carouselConfig = {

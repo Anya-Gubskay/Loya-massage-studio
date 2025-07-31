@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MasterCardDumb } from '@components/dumb/master-card/master-card';
+import { MetaService } from '@services/meta.service';
 import { MasterCard } from '@shared/interfaces/master-card';
 import { TitlePage } from "@shared/ui/title-page/title-page";
 
@@ -10,6 +11,20 @@ import { TitlePage } from "@shared/ui/title-page/title-page";
   styleUrl: './about-team.scss'
 })
 export class AboutTeamSmart {
+  private metaService = inject(MetaService)
+  constructor() {
+    this.metaService.setMetaTags({
+      title: 'Наши мастера | Loya Massage Studio - профессиональные массажисты Минска',
+      description: 'Команда сертифицированных массажистов Loya Massage Studio. ' +
+                  'Никита - основатель студии, топ-мастер с авторской методикой релакс-массажа. ' +
+                  'Все специалисты с большим опытом. ' +
+                  'Запишитесь к любому мастеру онлайн.',
+      keywords: 'массажисты Минск, лучшие мастера массажа, запись к массажисту, ' +
+               'Никита массажист, релакс массаж, профессиональные массажисты, ' +
+               'мастера Loya Massage, сухие иглы, банки массаж, блейдинг',
+      image: '/assets/images/team/nikita.webp',
+    });
+  }
   masters: MasterCard[] = [
     {
       id: 1,
