@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card.scss'
 })
 export class Card {
-  @Input() additionalClasses: string = ''; // Дополнительные классы для кастомизации
+  @Input() additionalClasses: string = ''; 
 }

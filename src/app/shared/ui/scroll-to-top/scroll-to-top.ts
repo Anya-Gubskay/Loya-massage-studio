@@ -13,13 +13,13 @@ export class ScrollToTop {
   @HostListener('window:scroll')
   checkScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.isVisible = scrollPosition > 300; // Показываем кнопку после прокрутки на 300px
+    this.isVisible = scrollPosition > 300; 
   }
 
   scrollToTop() {
     window.scroll({
       top: 0,
-      behavior: 'smooth' // Плавная прокрутка
+      behavior: 'smooth' 
     });
   }
 }

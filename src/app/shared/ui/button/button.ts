@@ -17,13 +17,10 @@ export class Button {
   @Input() icon?: string;
   @Input() disabled: boolean = false;
 
-    // Добавляем поддержку routerLink (для Angular Router)
     @Input() routerLink?: string | any[];
   
-    // Добавляем поддержку href (для обычных ссылок)
     @Input() href?: string;
     
-    // Добавляем target (если ссылка должна открываться в новой вкладке)
     @Input() target?: '_blank' | '_self' | '_parent' | '_top' = '_blank';
 
     openLink() {
@@ -32,8 +29,6 @@ export class Button {
       }
     }
     
-
-    // Обработка клика, если используется routerLink
     handleClick() {
       if (this.routerLink && !this.disabled) {
         if (Array.isArray(this.routerLink)) {

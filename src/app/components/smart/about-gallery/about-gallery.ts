@@ -69,7 +69,6 @@ lightboxActive = false;
 currentImageIndex = 0;
 
 openLightbox(index: number) {
-  console.log('open');
   this.currentImageIndex = index;
   this.lightboxActive = true;
   // Блокируем скролл страницы при открытой галерее

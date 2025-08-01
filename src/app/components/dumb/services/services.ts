@@ -1,6 +1,5 @@
 import { Component, input } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 import { ScrollAnimationDirective } from '@shared/directives/scroll-animation.directive';
 import { CardImage } from '@shared/interfaces/card-image';
 import { Button } from '@shared/ui/button/button';

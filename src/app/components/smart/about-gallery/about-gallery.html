@@ -24,25 +24,21 @@
     чувство полной гармонии.
   </p>
 
-  <!-- Модальное окно галереи -->
   @if (lightboxActive) {
     <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
     (click)="closeLightboxOnBackdropClick($event)">
-      <!-- Кнопка закрытия -->
       <button 
         class="absolute z-50 text-4xl text-white transition-colors top-6 right-6 hover:text-amber-600"
         (click)="closeLightbox()">
         &times;
       </button>
       
-      <!-- Кнопка "назад" -->
       <button 
         class="absolute z-50 p-4 text-4xl text-white rounded-full left-76 hover:bg-white/10"
         (click)="prevImage()">
         &#10094;
       </button>
       
-      <!-- Основное изображение -->
       <div class="relative max-w-[90vw] max-h-[90vh]">
         <img 
           [src]="allImages[currentImageIndex].src" 
@@ -51,14 +47,12 @@
         >
       </div>
       
-      <!-- Кнопка "вперед" -->
       <button 
         class="absolute z-50 p-4 text-4xl text-white rounded-full right-76 hover:bg-white/10"
         (click)="nextImage()">
         &#10095;
       </button>
-      
-      <!-- Индикатор текущего изображения -->
+
       <div class="absolute left-0 right-0 text-center text-white bottom-2">
         {{ currentImageIndex + 1 }} / {{ allImages.length }}
       </div>

@@ -1,7 +1,7 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, ElementRef, Inject, Input, PLATFORM_ID, ViewChild} from '@angular/core';
 import {  ServicesCard } from '@shared/interfaces/services-card';
-import { Button } from "../../../shared/ui/button/button";
+import { Button } from '@shared/ui/button/button';
 import { Card } from '@shared/ui/card/card';
 
 @Component({

@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { HeaderDumb } from '../../dumb/header/header';
 import { AppState } from '@stores/app-state';
 import { toSignal } from '@angular/core/rxjs-interop';
 import * as HeaderActions from '@stores/header/header.actions';
 import { selectMenuItems } from '@stores/header/header.selectors';
+import { HeaderDumb } from '@components/dumb/header/header';
 
 @Component({
   selector: 'app-header-smart',

@@ -1,6 +1,5 @@
 <app-card>
 <div class="flex flex-col gap-8 md:flex-row ">
-    <!-- Левая часть - фото и кнопка -->
     <div class="flex flex-col items-center md:w-1/3">
       <img 
         [src]="master.photo" 
@@ -10,12 +9,10 @@
       <app-button text="Записаться к мастеру" [href]="master.href"></app-button>
 
     </div>
-  
-    <!-- Правая часть - текст -->
+
     <div class="space-y-4 md:w-2/3">
       <h3 class="text-3xl font-bold text-gray-800">{{ master.name }}</h3>
       
-      <!-- Позиции теперь выводятся через ngFor -->
       <div class="space-y-1 text-lg font-medium text-amber-800">
         @for (position of master.positions; track $index) {
           <p>{{ position }}</p>
@@ -24,7 +21,6 @@
       
       <p class="text-gray-600">{{ master.description }}</p>
       
-      <!-- Остальное без изменений -->
       <div class="mt-4">
         <h4 class="mb-2 text-lg font-semibold text-gray-800">
           В работе может использовать вспомогательные инструменты:
