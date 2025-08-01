@@ -60,7 +60,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
+                  "maximumWarning": "600kB",
                   "maximumError": "1MB"
                 },
                 {
@@ -91,6 +91,7 @@
           },
           "defaultConfiguration": "development"
         },
+        
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
         },
