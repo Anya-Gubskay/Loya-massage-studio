@@ -11,7 +11,9 @@
           playsinline
           webkit-playinginline
           autoplay
+          [preload]="cardData.preload"
           fetchpriority="high"
+          
           volume="0">
           <source [src]="cardData.videoUrl" type="video/mp4">
           <source [src]="cardData.videoWebMUr" type="video/webm">

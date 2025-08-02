@@ -25,6 +25,7 @@ export class AboutServices {
   }
    services: ServicesCard[]  = [{
     title: "Массаж тела",
+    preload: '',
     videoUrl: "assets/videos/massage1.mp4",
     videoWebMUr: "assets/videos/massage1.webm",
     posterImage: 'assets/images/services/video1.png',
@@ -89,6 +90,7 @@ export class AboutServices {
   },
   {
     title: "Коррекция фигуры",
+    preload: 'none',
     videoUrl: "assets/videos/massage2.mp4",
     videoWebMUr: "assets/videos/massage2.wepb",
     posterImage: 'assets/images/services/video2.png',
@@ -113,6 +115,7 @@ export class AboutServices {
   },
   {
     title: "Массаж лица",
+    preload: 'none',
     videoUrl: "assets/videos/massage3.mp4",
     videoWebMUr: "assets/videos/massage3.wepb",
     posterImage: 'assets/images/services/video3.png',

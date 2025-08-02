@@ -1,5 +1,6 @@
 export interface ServicesCard {
   title: string;
+  preload: string;
   videoUrl: string;
   videoWebMUr?: string;
   posterImage: string;
