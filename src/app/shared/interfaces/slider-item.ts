@@ -7,6 +7,7 @@ export interface CarouselItem {
     role?: string;
     template?: TemplateRef<any>;
     alt: string;
+    lasy?: boolean;
   }
 
   export interface CarouselSlide {

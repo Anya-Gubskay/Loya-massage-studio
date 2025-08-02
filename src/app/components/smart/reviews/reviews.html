@@ -9,7 +9,7 @@
   <ng-template #itemTemplate let-item>
     <div class="flex flex-col items-center h-full team-card">
         <img class="object-contain w-full max-h-[400px] md:max-h-[500px] mx-auto transition-all duration-300 ease-out hover:scale-110 hover:shadow-lg" 
-             [src]="item.photo" [alt]="item.alt" >
+             [src]="item.photo" [alt]="item.alt" [loading]="!!item.lazy" >
     </div>
   </ng-template>
     </app-carousel>

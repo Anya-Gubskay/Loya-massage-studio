@@ -47,43 +47,53 @@ export class ReviewsSmart  {
 reviews = signal<CarouselItem[]>([
     { 
       photo: '/assets/images/reviews/1.webp',
-        alt: 'Отзыв 1'
+        alt: 'Отзыв 1',
+        lazy: false
     },
     { 
       photo: '/assets/images/reviews/2.webp',
-       alt: 'Отзыв 2'
+       alt: 'Отзыв 2',
+       lazy: true
     },
     { 
       photo: '/assets/images/reviews/3.webp',
-      alt: 'Отзыв 3' 
+      alt: 'Отзыв 3',
+      lazy: true
     },
     { 
       photo: '/assets/images/reviews/4.webp',
-      alt: 'Отзыв 4' 
+      alt: 'Отзыв 4',
+      lazy: true 
     },
     { 
       photo: '/assets/images/reviews/5.webp',
-      alt: 'Отзыв 5' 
+      alt: 'Отзыв 5',
+      lazy: true
     },
     { 
       photo: '/assets/images/reviews/6.webp',
-      alt: 'Отзыв 6' 
+      alt: 'Отзыв 6',
+      lazy: true 
     },
     { 
       photo: '/assets/images/reviews/7.webp',
-      alt: 'Отзыв 7' 
+      alt: 'Отзыв 7',
+      lazy: true
     },
     { 
       photo: '/assets/images/reviews/8.webp',
-       alt: 'Отзыв 8'
+       alt: 'Отзыв 8',
+       lazy: true
     },
     { 
       photo: '/assets/images/reviews/9.webp',
-      alt: 'Отзыв 9' 
+      alt: 'Отзыв 9',
+      lazy: true
     },
     { 
       photo: '/assets/images/reviews/10.webp',
-      alt: 'Отзыв 10' 
+      alt: 'Отзыв 10',
+      lazy: false
     },
   ]);
 }
