@@ -20,6 +20,9 @@ export class MetaService {
     description?: string;
     keywords?: string;
     image?: string;
+    imageWidth?: string,
+    imageHeight?: string,
+    ogImage?: string;
     url?: string;
     canonicalUrl?: string;
   }) {
@@ -49,8 +52,14 @@ export class MetaService {
       const fullImageUrl = this.getAbsoluteUrl(config.image);
       this.updateTag('property', 'og:image', fullImageUrl);
       this.updateTag('name', 'twitter:image', fullImageUrl);
+      this.updateTag('name', 'twitter:image', fullImageUrl);
     }
 
+    if (config.imageWidth && config.imageHeight) {
+      this.updateTag('property', 'og:image:width', config.imageWidth);
+      this.updateTag('property', 'og:image:height', config.imageHeight);
+    }
+    
     // Twitter Card
     this.updateTag('name', 'twitter:card', 'summary_large_image');
     this.updateTag('name', 'twitter:title', config.title);

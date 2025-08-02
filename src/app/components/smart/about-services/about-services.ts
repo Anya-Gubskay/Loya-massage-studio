@@ -25,8 +25,8 @@ export class AboutServices {
   }
    services: ServicesCard[]  = [{
     title: "Массаж тела",
-    videoUrl: "assets/videos/massage1.mp4",
-    videoWebMUr: "assets/videos/massage1.webm",
+    id: '1106478325',
+    videoUrl: "https://vimeo.com/1106478325",
     posterImage: 'assets/images/services/video1.png',
     note: "Услуга ТОП-МАСТЕРА + 10р к прайсу",
     disclaimer: "* НЕ РАСПРОСТРАНЯЕТСЯ НА АВТОРСКИЙ МАССАЖ",
@@ -89,8 +89,8 @@ export class AboutServices {
   },
   {
     title: "Коррекция фигуры",
-    videoUrl: "assets/videos/massage2.mp4",
-    videoWebMUr: "assets/videos/massage2.wepb",
+    id: "1106478297",
+    videoUrl: "https://vimeo.com/1106478297",
     posterImage: 'assets/images/services/video2.png',
     note: "Услуга ТОП-МАСТЕРА + 10р к прайсу",
     disclaimer: "* НЕ РАСПРОСТРАНЯЕТСЯ НА АВТОРСКИЙ МАССАЖ",
@@ -113,8 +113,9 @@ export class AboutServices {
   },
   {
     title: "Массаж лица",
-    videoUrl: "assets/videos/massage3.mp4",
-    videoWebMUr: "assets/videos/massage3.wepb",
+
+    id: "1106478340",
+    videoUrl: "https://vimeo.com/1106478340",
     posterImage: 'assets/images/services/video3.png',
     note: "Услуга ТОП-МАСТЕРА + 10р к прайсу",
     disclaimer: "* НЕ РАСПРОСТРАНЯЕТСЯ НА АВТОРСКИЙ МАССАЖ",

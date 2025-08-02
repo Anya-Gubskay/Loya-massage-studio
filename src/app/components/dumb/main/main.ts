@@ -13,9 +13,11 @@ export class MainDumb {
   constructor() {
     this.metaService.setMetaTags({
       title: 'О нашем салоне',
-      description: 'Loya Massage Studio - это профессиональный массажный салон в центре Минска с 2024 года',
+      description: 'Loya Massage Studio - это профессиональный массажный салон в центре Минска.',
       keywords: 'массажный салон, о нас, история, специалисты',
       image: 'assets/images/main-desktop.jpg',
+      imageWidth: '1200',
+      imageHeight: '630'
     });
   }
 }
