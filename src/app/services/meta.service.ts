@@ -7,7 +7,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class MetaService {
   private defaultDescription = 'Loya Massage Studio - профессиональный массажный салон в Минске';
-  private readonly baseUrl = 'https://loya.by';
+  private readonly baseUrl = 'https://loya-massage-studio.vercel.app/';
 
   constructor(
     private meta: Meta,
