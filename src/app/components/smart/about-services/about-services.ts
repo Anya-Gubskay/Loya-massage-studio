@@ -20,7 +20,7 @@ export class AboutServices {
       keywords: 'массаж Минск, прайс на массаж, коррекция фигуры, массаж лица, ' +
                'стоимость массажа, Loya Massage Studio услуги, антицеллюлитный массаж, ' +
                'релакс массаж, видео массажа, запись на массаж',
-      image: 'assets/images/massage/classical.webp',
+      image: '/assets/images/massage/classical.webp',
     });
   }
    services: ServicesCard[]  = [{
