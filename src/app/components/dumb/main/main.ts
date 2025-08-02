@@ -12,7 +12,7 @@ export class MainDumb {
   private metaService = inject(MetaService)
   constructor() {
     this.metaService.setMetaTags({
-      title: 'О нашем салоне',
+      title: 'О нашем салоне Loya Massage Studio',
       description: 'Loya Massage Studio - это профессиональный массажный салон в центре Минска c 2024 года.',
       keywords: 'массажный салон, о нас, история, специалисты',
       image: '/assets/images/main-desktop.jpg',
