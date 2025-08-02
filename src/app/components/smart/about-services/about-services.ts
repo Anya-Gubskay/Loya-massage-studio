@@ -16,17 +16,17 @@ export class AboutServices {
     this.metaService.setMetaTags({
       title: 'Услуги массажного салона Loya Massage Studio в Минске',
       description: 'Профессиональные массажные услуги в Минске: массаж тела, коррекция фигуры и массаж лица. ' +
-                  'Полный прайс-лист 2024 года. Видео-обзоры всех процедур. Запишитесь онлайн или по телефону.',
+                  'Полный прайс-лист. Видео-обзоры всех процедур. Запишитесь онлайн или по телефону.',
       keywords: 'массаж Минск, прайс на массаж, коррекция фигуры, массаж лица, ' +
                'стоимость массажа, Loya Massage Studio услуги, антицеллюлитный массаж, ' +
                'релакс массаж, видео массажа, запись на массаж',
-      image: '/assets/images/massage/classical.webp',
+      image: 'assets/images/massage/classical.webp',
     });
   }
    services: ServicesCard[]  = [{
     title: "Массаж тела",
-    id: '1106478325',
-    videoUrl: "https://vimeo.com/1106478325",
+    videoUrl: "assets/videos/massage1.mp4",
+    videoWebMUr: "assets/videos/massage1.webm",
     posterImage: 'assets/images/services/video1.png',
     note: "Услуга ТОП-МАСТЕРА + 10р к прайсу",
     disclaimer: "* НЕ РАСПРОСТРАНЯЕТСЯ НА АВТОРСКИЙ МАССАЖ",
@@ -89,8 +89,8 @@ export class AboutServices {
   },
   {
     title: "Коррекция фигуры",
-    id: "1106478297",
-    videoUrl: "https://vimeo.com/1106478297",
+    videoUrl: "assets/videos/massage2.mp4",
+    videoWebMUr: "assets/videos/massage2.wepb",
     posterImage: 'assets/images/services/video2.png',
     note: "Услуга ТОП-МАСТЕРА + 10р к прайсу",
     disclaimer: "* НЕ РАСПРОСТРАНЯЕТСЯ НА АВТОРСКИЙ МАССАЖ",
@@ -113,9 +113,8 @@ export class AboutServices {
   },
   {
     title: "Массаж лица",
-
-    id: "1106478340",
-    videoUrl: "https://vimeo.com/1106478340",
+    videoUrl: "assets/videos/massage3.mp4",
+    videoWebMUr: "assets/videos/massage3.wepb",
     posterImage: 'assets/images/services/video3.png',
     note: "Услуга ТОП-МАСТЕРА + 10р к прайсу",
     disclaimer: "* НЕ РАСПРОСТРАНЯЕТСЯ НА АВТОРСКИЙ МАССАЖ",

@@ -1,6 +1,5 @@
 export interface ServicesCard {
   title: string;
-  id: string;
   videoUrl: string;
   videoWebMUr?: string;
   posterImage: string;
