@@ -37,7 +37,7 @@ export class CardServicesDumb {
 
   getSafeVimeoUrl(videoId: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(
-      `https://embed.wave.video/${videoId}?autoplay=1&muted=1&background=1`
+      `https://embed.wave.video/${videoId}?autoplay=1&muted=1&loop=1&playsinline=1&background=1&controls=0`
     );
   }
 
