@@ -1,5 +1,6 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, ElementRef, Inject, Input, PLATFORM_ID, ViewChild} from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import {  ServicesCard } from '@shared/interfaces/services-card';
 import { Button } from '@shared/ui/button/button';
 import { Card } from '@shared/ui/card/card';
@@ -14,7 +15,7 @@ export class CardServicesDumb {
   @Input()cardData!: ServicesCard;
   @ViewChild('videoElement') videoRef!: ElementRef<HTMLVideoElement>;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private sanitizer: DomSanitizer) {}
 
   ngAfterViewInit() {
     this.forceVideoReload();
@@ -32,6 +33,12 @@ export class CardServicesDumb {
     } catch (e) {
       console.error('Video load error:', e);
     }
+  }
+
+  getSafeVimeoUrl(videoId: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(
+      `https://embed.wave.video/${videoId}?autoplay=1&muted=1&background=1`
+    );
   }
 
 }
