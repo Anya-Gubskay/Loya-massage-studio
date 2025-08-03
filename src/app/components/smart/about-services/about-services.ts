@@ -25,7 +25,7 @@ export class AboutServices {
   }
    services: ServicesCard[]  = [{
     title: "Массаж тела",
-    id:'x3x64i',
+    id:'1nylfc',
     preload: '',
     videoUrl: "assets/videos/massage1.mp4",
     videoWebMUr: "assets/videos/massage1.webm",
@@ -117,7 +117,7 @@ export class AboutServices {
   },
   {
     title: "Массаж лица",
-    id:'1nylfc',
+    id:'x3x64i',
     preload: 'none',
     videoUrl: "assets/videos/massage3.mp4",
     videoWebMUr: "assets/videos/massage3.wepb",
