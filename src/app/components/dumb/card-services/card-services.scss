@@ -1,7 +1,8 @@
 :host {
     iframe {
         aspect-ratio: 9/16; /* Соотношение сторон как в вашем примере (высота 1136 при ширине 640) */
-        background: #000; /* Фон на случай загрузки */
+        background: #5A3E2B; /* Фон на случай загрузки */
+        overflow: hidden;
       }
       video::-webkit-media-controls {
         display: none !important;
