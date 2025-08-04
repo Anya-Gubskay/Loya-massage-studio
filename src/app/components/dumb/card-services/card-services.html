@@ -13,10 +13,9 @@
           autoplay
           [preload]="cardData.preload"
           fetchpriority="high"
-          
+          preload="auto"
+          [src]="cardData.videoUrl"
           volume="0">
-          <source [src]="cardData.videoUrl" type="video/mp4">
-          <source [src]="cardData.videoWebMUr" type="video/webm">
         </video>
       </div>
       <app-button class="w-full px-3 py-1.5 text-sm text-center" text="Записаться" href="https://dikidi.net/601523?p=0.pi"></app-button>
