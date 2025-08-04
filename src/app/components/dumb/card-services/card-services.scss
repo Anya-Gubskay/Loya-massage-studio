@@ -3,4 +3,10 @@
         aspect-ratio: 9/16; /* Соотношение сторон как в вашем примере (высота 1136 при ширине 640) */
         background: #000; /* Фон на случай загрузки */
       }
+      video::-webkit-media-controls {
+        display: none !important;
+      }
+      video::-webkit-media-controls-enclosure {
+        display: none !important;
+      }
 }
