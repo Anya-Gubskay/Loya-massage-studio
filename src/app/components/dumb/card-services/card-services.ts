@@ -37,7 +37,7 @@ export class CardServicesDumb {
 
   getSafeVimeoUrl(videoId: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(
-      `https://streamable.com/e/${videoId}?autoplay=1&muted=1&controls=0&playsinline=1`
+      `https://streamable.com/e/${videoId}?autoplay=1&muted=1&nocontrols=1&playsinline=1`
     );
   }
 
