@@ -8,12 +8,11 @@ import { CardImage } from '@shared/interfaces/card-image';
 import { ServicesGalleryComponent } from '@components/dumb/services/services';
 import { AboutSmart } from '@components/smart/about/about';
 import { CarouselItem } from '@shared/interfaces/slider-item';
-import { AboutServices } from "../about-services/about-services";
 
 
 @Component({
   selector: 'app-main-smart',
-  imports: [ServicesGalleryComponent, Team, Promotion, Certificate, Contacts, AboutSmart, MainDumb, Promotion, AboutServices],
+  imports: [ServicesGalleryComponent, Team, Promotion, Certificate, Contacts, AboutSmart, MainDumb, Promotion],
   templateUrl: './main.smart.html',
   styleUrl: './main.smart.scss'
 })
