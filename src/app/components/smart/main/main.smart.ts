@@ -55,32 +55,32 @@ export class MainSmart {
   servicesContent = signal<CardImage[]>([
     { 
       title: 'Классический массаж', 
-      image: '/assets/images/massage/classical.webp',
+      image: '/assets/images/massage/classical.jpg',
       alt: 'Классический массаж', 
     },
     { 
       title: 'Спортивный массаж', 
-      image: '/assets/images/massage/sport.webp',
+      image: '/assets/images/massage/sport.jpg',
       alt: 'Спортивный массаж', 
     },
     { 
       title: 'Коррекция фигуры', 
-      image: '/assets/images/massage/correction.webp',
+      image: '/assets/images/massage/correction.jpg',
       alt: 'Коррекция фигуры',  
     },
     { 
       title: 'Массаж для беременных', 
-      image: '/assets/images/massage/pregnancy.webp',
+      image: '/assets/images/massage/pregnancy.jpg',
       alt: 'Массаж для беременных',  
     },
     { 
       title: 'Парный массаж', 
-      image: '/assets/images/massage/doubles.webp',
+      image: '/assets/images/massage/doubles.jpg',
       alt: 'Парный массаж', 
     },
     { 
       title: 'Медитативный массаж', 
-      image: '/assets/images/massage/meditation.webp',
+      image: '/assets/images/massage/meditation.jpg',
       alt: 'Медитативный массаж', 
     }
   ]);
