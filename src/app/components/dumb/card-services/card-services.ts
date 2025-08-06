@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, ElementRef, Inject, Input, PLATFORM_ID, ViewChild} from '@angular/core';
+import { Component, ElementRef, Inject, Input, PLATFORM_ID, signal, ViewChild} from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import {  ServicesCard } from '@shared/interfaces/services-card';
 import { Button } from '@shared/ui/button/button';
@@ -14,6 +14,7 @@ import { Card } from '@shared/ui/card/card';
 export class CardServicesDumb {
   @Input()cardData!: ServicesCard;
   @ViewChild('videoElement') videoRef!: ElementRef<HTMLVideoElement>;
+  isVideoLoading = signal(true);  // Сигнал вместо boolean
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private sanitizer: DomSanitizer) {}
 
@@ -39,6 +40,14 @@ export class CardServicesDumb {
     return this.sanitizer.bypassSecurityTrustResourceUrl(
       `https://streamable.com/e/${videoId}?autoplay=1&muted=1&nocontrols=1&playsinline=1&background=1&scrolling="no"`
     );
+  }
+
+  onVideoLoaded() {
+    this.isVideoLoading.set(false); 
+  }
+
+  onVideoError() {
+    this.isVideoLoading.set(false);
   }
 
 }
