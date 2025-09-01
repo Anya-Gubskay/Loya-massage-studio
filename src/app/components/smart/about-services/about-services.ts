@@ -74,6 +74,12 @@ export class AboutServices {
         ]
       },
       {
+        name: "МАССАЖ СПИНЫ, ШЕИ И ДЕКОЛЬТЕ",
+        services: [
+          { duration: "40 МИН.", price: "60 РУБ." }
+        ]
+      },
+      {
         name: "ПАРНЫЙ МАССАЖ",
         services: [
           { duration: "60 МИН.", price: "120 РУБ." },
@@ -81,9 +87,9 @@ export class AboutServices {
         ]
       },
       {
-        name: "МЕДИТАТИВНЫЙ МАССАЖ (АВТОРСКИЙ)",
+        name: "АВТОРСКИЙ",
         services: [
-          { duration: "60 МИН.", price: "120 РУБ." }
+          { duration: "70 МИН.", price: "100 РУБ." }
         ],
         isAuthor: true
       }
@@ -103,7 +109,7 @@ export class AboutServices {
         name: "АНТИЦЕЛЛЮЛИТНЫЙ",
         services: [
           { duration: "60 МИН.", price: "80 РУБ." },
-          { duration: "90 МИН.", price: "100 РУБ." }
+          { duration: "75 МИН.", price: "100 РУБ." }
         ]
       },
       {
@@ -136,6 +142,30 @@ export class AboutServices {
         name: "Лицо + спина",
         services: [
           { duration: "70 МИН.", price: "90 РУБ." },
+        ]
+      }
+    ]
+  },
+  {
+    title: "Комплексный массаж",
+    id:'l7x91i',
+    preload: 'none',
+    videoUrl: "assets/videos/massage4.mp4",
+    videoWebMUr: "assets/videos/massage4.wepb",
+    posterImage: 'assets/images/services/video4.png',
+    note: "Услуга ТОП-МАСТЕРА + 10р к прайсу",
+    disclaimer: "* НЕ РАСПРОСТРАНЯЕТСЯ НА АВТОРСКИЙ МАССАЖ",
+    serviceGroups: [
+      {
+        name: "Голова, шея и декольте",
+        services: [
+          { duration: "30 МИН.", price: "50 РУБ." },
+        ]
+      },
+      {
+        name: "Стопы и голени",
+        services: [
+          { duration: "30 МИН.", price: "50 РУБ." },
         ]
       }
     ]
