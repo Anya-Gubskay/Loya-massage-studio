@@ -46,9 +46,6 @@ export class AboutMassageHomeSmart {
       <li>– если есть ограничения по здоровью</li>
       <li>– если на улице плохая погода и у вас нет желания выезжать</li>
     </ul>
-    <div class="mt-4">
-      <p class="font-semibold">Социальная поддержка</p>
-    </div>
   </div>
 
   <!-- Что предоставляем -->
