@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { MainDumb } from "@components/dumb/main/main";
-import { Promotion } from "@components/dumb/promotion/promotion";
+import { MainDumb } from '@components/dumb/main/main';
+import { Promotion } from '@components/dumb/promotion/promotion';
 import { Certificate } from '@components/dumb/certificate/certificate';
 import { Team } from '@components/dumb/team/team';
 import { Contacts } from '@components/dumb/contacts/contacts';
@@ -8,81 +8,105 @@ import { CardImage } from '@shared/interfaces/card-image';
 import { ServicesGalleryComponent } from '@components/dumb/services/services';
 import { AboutSmart } from '@components/smart/about/about';
 import { CarouselItem } from '@shared/interfaces/slider-item';
-
+import { MassageHomeDump } from '@components/dumb/massage-home/massage-home';
 
 @Component({
   selector: 'app-main-smart',
-  imports: [ServicesGalleryComponent, Team, Promotion, Certificate, Contacts, AboutSmart, MainDumb, Promotion],
+  imports: [
+    ServicesGalleryComponent,
+    Team,
+    Promotion,
+    Certificate,
+    Contacts,
+    AboutSmart,
+    MainDumb,
+    Promotion,
+    MassageHomeDump,
+  ],
   templateUrl: './main.smart.html',
-  styleUrl: './main.smart.scss'
+  styleUrl: './main.smart.scss',
 })
 export class MainSmart {
-  
-  carouselPromotionContent= signal< CarouselItem[]>([{photo: 'assets/images/promotions/1.webp', alt: 'акции на первое посещение'}, {photo: 'assets/images/promotions/2.webp', alt: 'скидка по абонементу'}]);
-  carouselTeamContent = signal< CarouselItem[]>([
-    { 
-      name: 'НИКИТА', 
-      role: 'ТОП-МАСТЕР', 
+  carouselPromotionContent = signal<CarouselItem[]>([
+    {
+      photo: 'assets/images/promotions/1.webp',
+      alt: 'акции на первое посещение',
+    },
+    { photo: 'assets/images/promotions/2.webp', alt: 'скидка по абонементу' },
+  ]);
+  carouselMassageHomeContent = signal<CarouselItem[]>([
+    {
+      photo: 'assets/images/massage-home/1.webp',
+      alt: 'массаж с выездом на дом',
+    },
+    { photo: 'assets/images/massage-home/2.webp', alt: 'массаж на дому' },
+    { photo: 'assets/images/massage-home/3.webp', alt: 'массаж на дому' },
+    { photo: 'assets/images/massage-home/4.webp', alt: 'массаж на дому' },
+    { photo: 'assets/images/massage-home/5.webp', alt: 'массаж на дому' },
+  ]);
+  carouselTeamContent = signal<CarouselItem[]>([
+    {
+      name: 'НИКИТА',
+      role: 'ТОП-МАСТЕР',
       photo: '/assets/images/team/nikita.webp',
-      alt: 'Никаита'
+      alt: 'Никаита',
     },
-    { 
-      name: 'ДМИТРИЙ', 
-      role: 'ТОП-МАСТЕР', 
+    {
+      name: 'ДМИТРИЙ',
+      role: 'ТОП-МАСТЕР',
       photo: '/assets/images/team/dima.webp',
-      alt: 'Дмитрий'
+      alt: 'Дмитрий',
     },
-    { 
-      name: 'ЮЛИЯ', 
-      role: 'МАСТЕР', 
+    {
+      name: 'ЮЛИЯ',
+      role: 'МАСТЕР',
       photo: '/assets/images/team/juliya.webp',
-      alt: 'Юлия'
+      alt: 'Юлия',
     },
-    { 
-      name: 'АНДРЕЙ', 
-      role: 'МАСТЕР', 
+    {
+      name: 'АНДРЕЙ',
+      role: 'МАСТЕР',
       photo: '/assets/images/team/andrey.webp',
-      alt: 'Андрей'
+      alt: 'Андрей',
     },
-    { 
-      name: 'ИВАН', 
-      role: 'МАСТЕР', 
+    {
+      name: 'ИВАН',
+      role: 'МАСТЕР',
       photo: '/assets/images/team/ivan.webp',
-      alt: 'Иван'
-    }
+      alt: 'Иван',
+    },
   ]);
 
   servicesContent = signal<CardImage[]>([
-    { 
-      title: 'Классический массаж', 
+    {
+      title: 'Классический массаж',
       image: '/assets/images/massage/classical.jpg',
-      alt: 'Классический массаж', 
+      alt: 'Классический массаж',
     },
-    { 
-      title: 'Спортивный массаж', 
+    {
+      title: 'Спортивный массаж',
       image: '/assets/images/massage/sport.jpg',
-      alt: 'Спортивный массаж', 
+      alt: 'Спортивный массаж',
     },
-    { 
-      title: 'Коррекция фигуры', 
+    {
+      title: 'Коррекция фигуры',
       image: '/assets/images/massage/correction.jpg',
-      alt: 'Коррекция фигуры',  
+      alt: 'Коррекция фигуры',
     },
-    { 
-      title: 'Массаж для беременных', 
+    {
+      title: 'Массаж для беременных',
       image: '/assets/images/massage/pregnancy.jpg',
-      alt: 'Массаж для беременных',  
+      alt: 'Массаж для беременных',
     },
-    { 
-      title: 'Парный массаж', 
+    {
+      title: 'Парный массаж',
       image: '/assets/images/massage/doubles.jpg',
-      alt: 'Парный массаж', 
+      alt: 'Парный массаж',
     },
-    { 
-      title: 'Медитативный массаж', 
+    {
+      title: 'Медитативный массаж',
       image: '/assets/images/massage/meditation.jpg',
-      alt: 'Медитативный массаж', 
-    }
+      alt: 'Медитативный массаж',
+    },
   ]);
-
 }

@@ -7,7 +7,6 @@ import { Card } from "@shared/ui/card/card";
   selector: 'app-promo-card-dumb',
   imports: [Card],
   templateUrl: './promo-card.html',
-  styleUrl: './promo-card.scss'
 })
 export class PromoCardDumb {
   @Input() promotion!: Promotion;

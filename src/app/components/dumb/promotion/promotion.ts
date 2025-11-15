@@ -6,13 +6,11 @@ import { Button } from '@shared/ui/button/button';
 
 @Component({
   selector: 'app-promotion-dumb',
-  imports: [Button, Carousel, ScrollAnimationDirective, Carousel],
+  imports: [Button, ScrollAnimationDirective, Carousel],
   templateUrl: './promotion.html',
   styleUrl: './promotion.scss'
 })
 export class Promotion {
-
-  
   data = input<CarouselItem[]>([]);
   carouselConfig = signal<CarouselConfig>({
         slidesToShow: 1,
