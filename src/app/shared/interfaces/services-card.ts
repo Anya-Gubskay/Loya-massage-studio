@@ -6,8 +6,8 @@ export interface ServicesCard {
   videoWebMUr?: string;
   posterImage: string;
   serviceGroups: ServiceGroup[];
-  note: string;
-  disclaimer: string;
+  note?: string;
+  disclaimer?: string;
 }
 
 export interface ServiceGroup {
