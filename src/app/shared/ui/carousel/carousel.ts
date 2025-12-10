@@ -59,11 +59,27 @@ export class Carousel {
     ];
   }
 
-  get transformStyle(): string {
-    const offset = this.config().infinite ? this.config().slidesToShow! : 0;
-    return `translateX(-${(this.currentIndex + offset) * (100 / this.config().slidesToShow!)}%)`;
-  }
+get transformStyle(): string {
+    const config = this.config();
+    const slidesLength = this.slides().length;
+    const slidesToShow = config.slidesToShow!;
 
+    // Если количество слайдов <= slidesToShow, трансформации не нужны.
+    if (slidesLength <= slidesToShow) {
+      return `translateX(0%)`;
+    }
+
+    // Логика для бесконечной карусели
+    const offset = config.infinite ? slidesToShow : 0;
+    
+    // Проверяем, что делитель (slidesToShow) не равен нулю, хотя это и так должно быть гарантировано конфигом.
+    if (slidesToShow === 0) return `translateX(0%)`; 
+
+    // Используем this.currentIndex, который управляет позицией.
+    // Если слайдов мало, этот код не выполнится благодаря проверке выше.
+    return `translateX(-${(this.currentIndex + offset) * (100 / slidesToShow)}%)`;
+  }
+  
   next(): void {
     this.transitionEnabled = true;
     this.currentIndex += this.config().slidesToScroll!;

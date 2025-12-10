@@ -109,27 +109,27 @@ export const routes: Routes = [
       },
     },
   },
-  {
-    path: 'outcall-massage',
-    loadComponent: () =>
-      import('./components/smart/about-massage-home/about-massage-home').then(
-        (m) => m.AboutMassageHomeSmart
-      ),
-    title: 'Массаж с выездом',
-    data: {
-      meta: {
-        title: 'Массаж с выездом на дом и в офис | Loga Massage Studio Минск',
-        description:
-          'Профессиональный массаж с выездом в любую точку Минска. ',
-        keywords:
-          'массаж с выездом, выездной массаж Минск, массаж на дом, ' +
-          'массаж в офис, лога массаж студия, мобильный массаж, ' +
-          'массажист с выездом, услуги массажа на дому, ' +
-          'профессиональный массаж с выездом, Минск МКАД массаж',
-        image: '/assets/images/massage-home/1.jpg',
-      },
-    },
-  },
+  // {
+  //   path: 'outcall-massage',
+  //   loadComponent: () =>
+  //     import('./components/smart/about-massage-home/about-massage-home').then(
+  //       (m) => m.AboutMassageHomeSmart
+  //     ),
+  //   title: 'Массаж с выездом',
+  //   data: {
+  //     meta: {
+  //       title: 'Массаж с выездом на дом и в офис | Loga Massage Studio Минск',
+  //       description:
+  //         'Профессиональный массаж с выездом в любую точку Минска. ',
+  //       keywords:
+  //         'массаж с выездом, выездной массаж Минск, массаж на дом, ' +
+  //         'массаж в офис, лога массаж студия, мобильный массаж, ' +
+  //         'массажист с выездом, услуги массажа на дому, ' +
+  //         'профессиональный массаж с выездом, Минск МКАД массаж',
+  //       image: '/assets/images/massage-home/1.jpg',
+  //     },
+  //   },
+  // },
   {
     path: 'certificates',
     loadComponent: () =>

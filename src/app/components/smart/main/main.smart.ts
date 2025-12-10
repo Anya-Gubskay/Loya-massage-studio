@@ -8,7 +8,6 @@ import { CardImage } from '@shared/interfaces/card-image';
 import { ServicesGalleryComponent } from '@components/dumb/services/services';
 import { AboutSmart } from '@components/smart/about/about';
 import { CarouselItem } from '@shared/interfaces/slider-item';
-import { MassageHomeDump } from '@components/dumb/massage-home/massage-home';
 
 @Component({
   selector: 'app-main-smart',
@@ -21,7 +20,6 @@ import { MassageHomeDump } from '@components/dumb/massage-home/massage-home';
     AboutSmart,
     MainDumb,
     Promotion,
-    MassageHomeDump,
   ],
   templateUrl: './main.smart.html',
   styleUrl: './main.smart.scss',
@@ -46,22 +44,16 @@ export class MainSmart {
   ]);
   carouselTeamContent = signal<CarouselItem[]>([
     {
-      name: 'НИКИТА',
-      role: 'ТОП-МАСТЕР',
-      photo: '/assets/images/team/nikita.webp',
-      alt: 'Никаита',
-    },
-    {
-      name: 'ДМИТРИЙ',
-      role: 'ТОП-МАСТЕР',
-      photo: '/assets/images/team/dima.webp',
-      alt: 'Дмитрий',
-    },
-    {
-      name: 'ЮЛИЯ',
+      name: 'ИВАН',
       role: 'МАСТЕР',
-      photo: '/assets/images/team/juliya.webp',
-      alt: 'Юлия',
+      photo: '/assets/images/team/ivan.webp',
+      alt: 'Иван',
+    },
+    {
+      name: 'Елизавета',
+      role: 'МАСТЕР',
+      photo: '/assets/images/team/elizaveta.webp',
+      alt: 'Дмитрий',
     },
     {
       name: 'АНДРЕЙ',
@@ -70,10 +62,10 @@ export class MainSmart {
       alt: 'Андрей',
     },
     {
-      name: 'ИВАН',
+      name: 'ЮЛИЯ',
       role: 'МАСТЕР',
-      photo: '/assets/images/team/ivan.webp',
-      alt: 'Иван',
+      photo: '/assets/images/team/juliya.webp',
+      alt: 'Юлия',
     },
   ]);
 

@@ -24,21 +24,8 @@ export class MenuService {
       id: 'services',
       title: 'Наши услуги',
       icon: 'spa',
-      route: '/#services',
-      routeForMobile: '/#services',
-      hasSubmenu: true,
-      submenu: [
-        {
-          id: 'services-salon',
-          title: 'Услуги в салоне',
-          route: '/services-salon',
-        },
-        {
-          id: 'outcall-massage',
-          title: 'Массаж с выездом',
-          route: '/outcall-massage',
-        },
-      ],
+      route: '/services-salon',
+      routeForMobile: '/services-salon',
     },
     {
       id: 'team',
