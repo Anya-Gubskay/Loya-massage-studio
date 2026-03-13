@@ -30,7 +30,6 @@ export class MainSmart {
       photo: 'assets/images/promotions/1.webp',
       alt: 'акции на первое посещение',
     },
-    { photo: 'assets/images/promotions/2.webp', alt: 'скидка по абонементу' },
   ]);
   carouselMassageHomeContent = signal<CarouselItem[]>([
     {
@@ -62,10 +61,10 @@ export class MainSmart {
       alt: 'Андрей',
     },
     {
-      name: 'ЮЛИЯ',
+      name: 'ТАЗЕГУЛЬ',
       role: 'МАСТЕР',
-      photo: '/assets/images/team/juliya.webp',
-      alt: 'Юлия',
+      photo: '/assets/images/team/tazegul.webp',
+      alt: 'Тазегуль',
     },
   ]);
 

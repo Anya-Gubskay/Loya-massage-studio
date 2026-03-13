@@ -37,62 +37,70 @@ export class AboutServices {
         {
           name: 'КЛАССИЧЕСКИЙ',
           services: [
-            { duration: '60 МИН.', price: '80 РУБ.' },
-            { duration: '90 МИН.', price: '100 РУБ.' },
+            { duration: '60 МИН.', price: '90 РУБ.' },
+            { duration: '90 МИН.', price: '110 РУБ.' },
           ],
         },
         {
           name: 'СПОРТИВНЫЙ',
           services: [
-            { duration: '60 МИН.', price: '90 РУБ.' },
-            { duration: '90 МИН.', price: '110 РУБ.' },
+            { duration: '60 МИН.', price: '100 РУБ.' },
+            { duration: '90 МИН.', price: '120 РУБ.' },
           ],
         },
         {
-          name: 'СУХОЙ (БЕЗ МАСЛА)',
+          name: 'МИОФАСЦИАЛЬНЫЙ (БЕЗ МАСЛА)',
           services: [
-            { duration: '60 МИН.', price: '90 РУБ.' },
-            { duration: '90 МИН.', price: '110 РУБ.' },
+            { duration: '60 МИН.', price: '100 РУБ.' },
+            { duration: '90 МИН.', price: '120 РУБ.' },
           ],
         },
         {
           name: 'RELAX МАССАЖ',
           services: [
-            { duration: '60 МИН.', price: '80 РУБ.' },
-            { duration: '90 МИН.', price: '100 РУБ.' },
+            { duration: '60 МИН.', price: '90 РУБ.' },
+            { duration: '90 МИН.', price: '110 РУБ.' },
           ],
         },
         {
           name: 'ДЛЯ БЕРЕМЕННЫХ',
-          services: [{ duration: '60 МИН.', price: '90 РУБ.' }],
+          services: [{ duration: '60 МИН.', price: '100 РУБ.' }],
         },
         {
           name: 'МАССАЖ СПИНЫ И ШЕИ',
-          services: [{ duration: '30 МИН.', price: '50 РУБ.' }],
+          services: [{ duration: '30 МИН.', price: '55 РУБ.' }],
         },
         {
           name: 'МАССАЖ СПИНЫ, ШЕИ И ДЕКОЛЬТЕ',
-          services: [{ duration: '40 МИН.', price: '65 РУБ.' }],
-        },
-        {
-          name: 'ПАРНЫЙ МАССАЖ',
-          services: [
-            { duration: '60 МИН.', price: '140 РУБ.' },
-            { duration: '90 МИН.', price: '180 РУБ.' },
-          ],
+          services: [{ duration: '40 МИН.', price: '75 РУБ.' }],
         },
         {
           name: 'АВТОРСКИЙ',
-          services: [{ duration: '70 МИН.', price: '110 РУБ.' }],
+          services: [{ duration: '70 МИН.', price: '120 РУБ.' }],
           isAuthor: true,
         },
         {
           name: 'МАССАЖ ТРИГГЕРНЫХ ТОЧЕК',
           services: [
-            { duration: '60 МИН.', price: '100 РУБ.' },
-            { duration: '90 МИН.', price: '120 РУБ.' },
+            { duration: '60 МИН.', price: '110 РУБ.' },
+            { duration: '90 МИН.', price: '130 РУБ.' },
           ],
           isAuthor: true,
+        },
+        {
+          name: 'Парный массаж (с горячими свечами +10р)',
+          services: [
+            { duration: '60 МИН.', price: '170 РУБ.' },
+            { duration: '90 МИН.', price: '210 РУБ.' },
+          ],
+        },
+        {
+          name: 'Тайский массаж',
+          services: [{ duration: '60 МИН.', price: '150 РУБ.' }],
+        },
+        {
+          name: 'Комплекс «от макушки до пят»',
+          services: [{ duration: '70 МИН.', price: '160 РУБ.' }],
         },
       ],
     },
@@ -107,15 +115,15 @@ export class AboutServices {
         {
           name: 'АНТИЦЕЛЛЮЛИТНЫЙ',
           services: [
-            { duration: '60 МИН.', price: '90 РУБ.' },
-            { duration: '75 МИН.', price: '110 РУБ.' },
+            { duration: '60 МИН.', price: '100 РУБ.' },
+            { duration: '75 МИН.', price: '120 РУБ.' },
           ],
         },
         {
           name: 'ЛИМФОДРЕНАЖНЫЙ',
           services: [
-            { duration: '60 МИН.', price: '80 РУБ.' },
-            { duration: '90 МИН.', price: '100 РУБ.' },
+            { duration: '60 МИН.', price: '90 РУБ.' },
+            { duration: '90 МИН.', price: '110 РУБ.' },
           ],
         },
       ],
@@ -131,13 +139,13 @@ export class AboutServices {
         {
           name: 'Лицо, шея, декольте',
           services: [
-            { duration: '45 МИН.', price: '70 РУБ.' },
-            { duration: '60 МИН.', price: '90 РУБ.' },
+            { duration: '45 МИН.', price: '80 РУБ.' },
+            { duration: '60 МИН.', price: '100 РУБ.' },
           ],
         },
         {
           name: 'Лицо + спина',
-          services: [{ duration: '70 МИН.', price: '100 РУБ.' }],
+          services: [{ duration: '70 МИН.', price: '110 РУБ.' }],
         },
       ],
     },

@@ -1,0 +1,14 @@
+:host {
+  ::ng-deep .promo-orange-link {
+  color: #ff8c42; /* Основной оранжевый */
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration-color: #ff8c42;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+::ng-deep .promo-orange-link:hover {
+  color: #e07c3c; /* Чуть темнее при наведении */
+  text-decoration-color: #e07c3c;
+}
+}
